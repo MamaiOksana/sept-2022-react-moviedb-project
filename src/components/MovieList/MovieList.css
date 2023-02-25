@@ -1,3 +1,13 @@
+.moviesContainer {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 110vh;
+    margin: 0 auto;
+    padding: 10px;
+    background: #fdebc5;
+}
 
 .mainContainer{
     background-image: url('https://img.freepik.com/free-vector/camera-with-film-strip-classic-background_1017-36800.jpg?w=1060&t=st=1677321320~exp=1677321920~hmac=d66a207df4a622a250027782c4cf51318bed30a95b1d9ecc45c439077499400c');
@@ -12,14 +22,23 @@
     padding: 0;
 }
 
+.mainContainer-dark {
+    background-image: url("https://i.pinimg.com/originals/6a/3a/9a/6a3a9aa650f610536f40bedc3e988365.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
 
+.mainContainer-dark .moviesContainer {
+    background-color: #5f608f;
+    color: white;
+}
 
 .mainContainer .pagination-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-
     padding: 10px 0;
 }
 
@@ -28,60 +47,79 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-
     font-size: 16px;
     font-weight: 400;
-
     width: 100%;
 }
 
 .mainContainer-dark .pagination-page {
-    background-color: #fdedcc;
+    background-color: #b2b2d5;
 }
+
+.mainContainer .pagination-page {
+    background-color: #efd5af;
+}
+
 .pagination-wrapper,
 .pagination-page,
 .pagination-active-page,
 .pagination-page-disabled {
-
     border-radius: 50%;
     width: 30px;
     height: 30px;
-
-    color: #fff;
-
+    color: #fefefe;
     display: flex;
     justify-content: center;
     align-items: center;
-
     padding: 5px;
-
     cursor: pointer;
+}
+
+.mainContainer-dark .pagination-wrapper .pagination-active-page {
+    background-color: #606190;
 }
 
 .mainContainer .pagination-wrapper .pagination-active-page {
-    background-color: seagreen;
-
+    background-color: #ec9216;
 }
 
-.mainContainer .pagination-wrapper .next, .previous {
-    background-color: lightseagreen;
-    border-radius: 50%;
 
+.mainContainer-dark .pagination-wrapper .next, .previous {
+    background-color: #575987;
+    border-radius: 50%;
     width: 30px;
     height: 30px;
-
-    color: #fff;
-
+    color: #fefefe;
     display: flex;
     justify-content: center;
     align-items: center;
-
     padding: 5px;
-
     cursor: pointer;
 }
 
+.mainContainer .pagination-wrapper .next, .previous {
+    background-color: #c58654;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: #122d3f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.mainContainer-dark .previous{
+    background-color: #575987;
+    color: #fefefe;
+}
+
 .mainContainer .pagination-wrapper .pagination-page-disabled {
+    background-color: lightgray;
+}
+
+.mainContainer-dark .pagination-wrapper .pagination-page-disabled {
     background-color: lightgray;
 }
 
@@ -101,46 +139,17 @@
 }
 
 
-.moviesContainer {
-    display: grid;
-    grid-template-rows: repeat(auto-fit, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-
-    width: 110vh;
-    margin: 0 auto;
-
-    padding: 10px;
-    background: #fdebc5;
-}
-
-
-.mainContainer-dark {
-    background-image: url("https://i.pinimg.com/originals/6a/3a/9a/6a3a9aa650f610536f40bedc3e988365.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-.mainContainer-dark .moviesContainer {
-    background-color: #5e5f8e;
-    color: white;
-}
-
 .mainContainer-dark  ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-
-
 .mainContainer-dark  .pagination-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-
     padding: 10px 0;
 }
 
@@ -149,38 +158,9 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-
     font-size: 16px;
     font-weight: 400;
-
     width: 100%;
-}
-
-
-.mainContainer-dark  .pagination-wrapper .pagination-active-page {
-    background-color: seagreen;
-}
-
-.mainContainer-dark  .pagination-wrapper .next, .previous {
-    background-color: lightseagreen;
-    border-radius: 50%;
-
-    width: 30px;
-    height: 30px;
-
-    color: #fff;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 5px;
-
-    cursor: pointer;
-}
-
-.mainContainer-dark  .pagination-wrapper .pagination-page-disabled {
-    background-color: lightgray;
 }
 
 .mainContainer-dark  .filters {

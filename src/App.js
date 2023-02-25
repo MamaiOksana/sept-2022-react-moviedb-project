@@ -1,4 +1,4 @@
-import {MovieInfo, MoviesList} from "./components";
+import {MovieInfo} from "./components";
 import React from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {MoviesPage} from "./containers/MoviesPage";

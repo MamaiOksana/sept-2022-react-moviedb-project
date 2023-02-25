@@ -18,7 +18,7 @@ const MoviesList = ({darkmode}) => {
         setPage(1)
     }, [movieKeywordId, movieGenre])
 
-    const {movies, genres, keywords, total_pages} = useSelector(state => state.movies)
+    const {movies, genres, keywords, total_pages, loading} = useSelector(state => state.movies)
 
     const dispatch = useDispatch();
 
@@ -35,7 +35,9 @@ const MoviesList = ({darkmode}) => {
     }, [movieKeyword])
 
     return (
+
         <div className={darkmode ? 'mainContainer-dark' : 'mainContainer'}>
+            {loading && <h1>Loading...........</h1>}
             <div className={'filters'} >
             <select name="genres" onChange={(e) =>setMovieGenre(e.target.value) } >
                 <option value=''>Genre</option>

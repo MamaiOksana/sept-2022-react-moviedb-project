@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from 'react';
 
-import {Header} from "../components/Header/Header";
+import {Header} from "../components";
 import {MoviesList} from "../components";
 
 const MoviesPage = () => {
     const [darkmode, setDarkmode] = useState(localStorage.getItem('darkmode') || false);
-    useEffect(()=>{
-        localStorage.setItem('darkmode', darkmode)
-    },[darkmode])
+    //useEffect(()=>{
+        //localStorage.setItem('darkmode', darkmode)
+    //},[darkmode])
 
     return (
         <div>

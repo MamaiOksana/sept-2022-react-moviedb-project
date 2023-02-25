@@ -1,10 +1,11 @@
 import React, {useEffect} from 'react';
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {movieActions} from "../../redux";
 
 import '../MovieInfo/MovieInfo.css'
 import {urls} from "../../configs";
+import {Paths} from "../../App";
 
 const MovieInfo = () => {
 
@@ -17,12 +18,12 @@ const MovieInfo = () => {
         dispatch(movieActions.getMovieById({id}))
     }, [])
 
-    console.log(movie)
+    const navigate = useNavigate();
 
     return (
         <div className={'background'}>
             <div className={'infoContainer'}>
-                <img src={`${urls.poster}${movie?.poster_path}`}/>
+                <img src={`${urls.poster}${movie?.poster_path}`} alt={'movie poster'}/>
                 <div>
                     <h1>{movie?.original_title}</h1>
                     <p><b>Status:</b> {movie?.status}</p>
@@ -34,7 +35,7 @@ const MovieInfo = () => {
                     <p className={'overview-text'}><b>Short overview: </b>{movie?.overview}</p>
                 </div>
             </div>
-            <button>Back</button>
+            <button className={'button'} onClick={() => navigate(Paths.MOVIES)}><b>{'<'}Back</b></button>
         </div>
     );
 };

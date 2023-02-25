@@ -9,7 +9,8 @@ const initialState = {
     keywords: [],
     movie: {},
     total_pages: 0,
-    errors: null
+    errors: null,
+    loading: null
 }
 
   const getAllMovies =  createAsyncThunk(
@@ -90,6 +91,11 @@ const getMovieById = createAsyncThunk(
                  state.keywords = action.payload.results
                  state.loading = false
              })
+             .addCase(getAllMovies.pending, (state, action)=>{
+                 state.movie = action.payload
+                 state.loading = true
+             })
+
              .addDefaultCase((state, action) => {
              const [actionStatus] = action.type.split('/').slice(-1);
              state.loading = actionStatus === 'pending';

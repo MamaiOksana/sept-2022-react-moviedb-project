@@ -1,0 +1,199 @@
+
+.mainContainer{
+    background-image: url('https://img.freepik.com/free-vector/camera-with-film-strip-classic-background_1017-36800.jpg?w=1060&t=st=1677321320~exp=1677321920~hmac=d66a207df4a622a250027782c4cf51318bed30a95b1d9ecc45c439077499400c');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.mainContainer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.mainContainer .pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    padding: 10px 0;
+}
+
+.mainContainer .pagination-wrapper .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    width: 100%;
+}
+
+.mainContainer-dark .pagination-page {
+    background-color: #fdedcc;
+}
+.pagination-wrapper,
+.pagination-page,
+.pagination-active-page,
+.pagination-page-disabled {
+
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+
+    color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5px;
+
+    cursor: pointer;
+}
+
+.mainContainer .pagination-wrapper .pagination-active-page {
+    background-color: seagreen;
+
+}
+
+.mainContainer .pagination-wrapper .next, .previous {
+    background-color: lightseagreen;
+    border-radius: 50%;
+
+    width: 30px;
+    height: 30px;
+
+    color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5px;
+
+    cursor: pointer;
+}
+
+.mainContainer .pagination-wrapper .pagination-page-disabled {
+    background-color: lightgray;
+}
+
+.mainContainer .filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.mainContainer .filters input, select {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+
+.moviesContainer {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    width: 110vh;
+    margin: 0 auto;
+
+    padding: 10px;
+    background: #fdebc5;
+}
+
+
+.mainContainer-dark {
+    background-image: url("https://i.pinimg.com/originals/6a/3a/9a/6a3a9aa650f610536f40bedc3e988365.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.mainContainer-dark .moviesContainer {
+    background-color: #5e5f8e;
+    color: white;
+}
+
+.mainContainer-dark  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.mainContainer-dark  .pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    padding: 10px 0;
+}
+
+.mainContainer-dark  .pagination-wrapper .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    width: 100%;
+}
+
+
+.mainContainer-dark  .pagination-wrapper .pagination-active-page {
+    background-color: seagreen;
+}
+
+.mainContainer-dark  .pagination-wrapper .next, .previous {
+    background-color: lightseagreen;
+    border-radius: 50%;
+
+    width: 30px;
+    height: 30px;
+
+    color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5px;
+
+    cursor: pointer;
+}
+
+.mainContainer-dark  .pagination-wrapper .pagination-page-disabled {
+    background-color: lightgray;
+}
+
+.mainContainer-dark  .filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.mainContainer-dark .filters input, select {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+}

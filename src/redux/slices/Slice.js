@@ -10,7 +10,7 @@ const initialState = {
     movie: {},
     total_pages: 0,
     errors: null,
-    loading: null
+    loading: false,
 }
 
   const getAllMovies =  createAsyncThunk(
@@ -93,7 +93,7 @@ const getMovieById = createAsyncThunk(
              })
              .addCase(getAllMovies.pending, (state, action)=>{
                  state.movie = action.payload
-                 state.loading = true
+                 state.loading = false
              })
 
              .addDefaultCase((state, action) => {

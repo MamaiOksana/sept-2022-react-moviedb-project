@@ -1,11 +1,11 @@
 import React from 'react';
 import {useNavigate} from "react-router-dom";
-import {Paths} from "../../App";
-import {urls} from "../../configs";
-import {useSelector} from "react-redux";
 import ReactStars from "react-rating-stars-component/dist/react-stars";
 
+import {urls} from "../../configs";
+import {useSelector} from "react-redux";
 import '../MoviesListCard/MoviesListCard.css'
+import {Paths} from "../../routes/routes";
 
 const MoviesListCard = ({mov}) => {
     const navigate = useNavigate()
@@ -13,13 +13,13 @@ const MoviesListCard = ({mov}) => {
     const {genres} = useSelector(state => state.movies)
 
     return (
-        <div className='movie-card' onClick={() => navigate(Paths.MOVIES + "/" + mov?.id)} >
+        <div className='movie-card' onClick={() => navigate("/" + mov?.id)} >
             <div className={'box-badge'}>
                 {mov?.genre_ids?.map(genre_id => (
-                    <span className='badge' >{genres.find(genre => genre?.id === genre_id)?.name}</span>
+                    <span key={genre_id} className='badge' >{genres.find(genre => genre?.id === genre_id)?.name}</span>
                 ))}
             </div>
-            <img src={`${urls.poster}${mov?.poster_path}`} />
+            {mov?.poster_path ?  <img src={`${urls.poster}${mov?.poster_path}`} /> : null}
             <div className='rating' >
                 <ReactStars
                     value={mov?.vote_average}

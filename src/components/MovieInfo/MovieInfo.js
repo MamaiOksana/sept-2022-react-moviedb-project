@@ -1,14 +1,15 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useNavigate, useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {movieActions} from "../../redux";
 
+import {movieActions} from "../../redux";
 import '../MovieInfo/MovieInfo.css'
 import {urls} from "../../configs";
-import {Paths} from "../../App";
+import '../Header/Header'
+import {Paths} from "../../routes/routes";
+import {DARK_MODE} from "../../containers/MoviesPage";
 
 const MovieInfo = () => {
-
     const {id} = useParams()
     const dispatch = useDispatch()
 
@@ -21,7 +22,9 @@ const MovieInfo = () => {
     const navigate = useNavigate();
 
     return (
-        <div className={'background'}>
+         <div className={JSON.parse(localStorage.getItem(DARK_MODE)) ? 'background-dark' : 'background'}>
+
+
             <div className={'infoContainer'}>
                 <img src={`${urls.poster}${movie?.poster_path}`} alt={'movie poster'}/>
                 <div>

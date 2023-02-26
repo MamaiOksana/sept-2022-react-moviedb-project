@@ -9,6 +9,18 @@
     background-size: cover;
 }
 
+.background-dark{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://img.freepik.com/free-photo/movie-background-collage_23-2149876028.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: whitesmoke;
+}
+
 .infoContainer{
     display: flex;
     justify-content: center;

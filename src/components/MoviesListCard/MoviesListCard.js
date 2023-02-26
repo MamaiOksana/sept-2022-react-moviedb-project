@@ -11,7 +11,7 @@ const MoviesListCard = ({mov}) => {
     const navigate = useNavigate()
 
     const {genres} = useSelector(state => state.movies)
-
+    const poster_path = urls.poster + mov.poster_path;
     return (
         <div className='movie-card' onClick={() => navigate("/" + mov?.id)} >
             <div className={'box-badge'}>
@@ -19,7 +19,7 @@ const MoviesListCard = ({mov}) => {
                     <span key={genre_id} className='badge' >{genres.find(genre => genre?.id === genre_id)?.name}</span>
                 ))}
             </div>
-            {mov?.poster_path ?  <img src={`${urls.poster}${mov?.poster_path}`} /> : null}
+            {mov.poster_path ?  <img src={`${poster_path}`} /> : null}
             <div className='rating' >
                 <ReactStars
                     value={mov?.vote_average}

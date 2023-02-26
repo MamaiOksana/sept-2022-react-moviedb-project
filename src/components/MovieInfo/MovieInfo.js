@@ -21,10 +21,13 @@ const MovieInfo = () => {
 
     const navigate = useNavigate();
 
+    if (!movie?.poster_path){
+        return;
+    }
     return (
          <div className={JSON.parse(localStorage.getItem(DARK_MODE)) ? 'background-dark' : 'background'}>
             <div className={'infoContainer'}>
-                <img src={`${urls.poster}${movie?.poster_path}`} alt={'movie poster'}/>
+                <img src={`${urls.poster}${movie.poster_path}`} alt={'movie poster'}/>
                 <div>
                     <h1>{movie?.original_title}</h1>
                     <p><b>Status:</b> {movie?.status}</p>

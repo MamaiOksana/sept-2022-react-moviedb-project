@@ -5,7 +5,7 @@ import ReactStars from "react-rating-stars-component/dist/react-stars";
 import {urls} from "../../configs";
 import {useSelector} from "react-redux";
 import '../MoviesListCard/MoviesListCard.css'
-import {Paths} from "../../routes/routes";
+
 
 const MoviesListCard = ({mov}) => {
     const navigate = useNavigate()

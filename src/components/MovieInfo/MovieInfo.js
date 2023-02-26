@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import {useNavigate, useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 
@@ -23,8 +23,6 @@ const MovieInfo = () => {
 
     return (
          <div className={JSON.parse(localStorage.getItem(DARK_MODE)) ? 'background-dark' : 'background'}>
-
-
             <div className={'infoContainer'}>
                 <img src={`${urls.poster}${movie?.poster_path}`} alt={'movie poster'}/>
                 <div>

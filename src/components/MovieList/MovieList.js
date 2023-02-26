@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-
 import ReactPaginate from "react-paginate";
+
 import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
 import {movieActions} from "../../redux";
 import '../MovieList/MovieList.css'

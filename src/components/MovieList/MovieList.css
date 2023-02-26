@@ -102,7 +102,7 @@
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    color: #122d3f;
+    color: #fefefe;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,6 +114,8 @@
     background-color: #575987;
     color: #fefefe;
 }
+
+
 
 .mainContainer .pagination-wrapper .pagination-page-disabled {
     background-color: lightgray;
